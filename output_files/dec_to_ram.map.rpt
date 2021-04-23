@@ -1,0 +1,1504 @@
+Analysis & Synthesis report for dec_to_ram
+Fri Apr 23 09:38:40 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |stand_ki_v1|control_4:control_4_module|s_FSM
+ 10. State Machine - |stand_ki_v1|stand_test:self_test_module|s_FSM
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block|altsyncram_2lp1:auto_generated
+ 16. Parameter Settings for User Entity Instance: gen:gen_module
+ 17. Parameter Settings for User Entity Instance: control_4:control_4_module
+ 18. Parameter Settings for User Entity Instance: in_out_elem:\gen1:0:s_port_module
+ 19. Parameter Settings for User Entity Instance: in_out_elem:\gen1:1:s_port_module
+ 20. Parameter Settings for User Entity Instance: in_out_elem:\gen1:2:s_port_module
+ 21. Parameter Settings for User Entity Instance: in_out_elem:\gen1:3:s_port_module
+ 22. Parameter Settings for User Entity Instance: in_out_elem:\gen1:4:s_port_module
+ 23. Parameter Settings for User Entity Instance: in_out_elem:\gen1:5:s_port_module
+ 24. Parameter Settings for User Entity Instance: in_out_elem:\gen1:6:s_port_module
+ 25. Parameter Settings for User Entity Instance: in_out_elem:\gen1:7:s_port_module
+ 26. Parameter Settings for User Entity Instance: in_out_elem:\gen1:8:s_port_module
+ 27. Parameter Settings for User Entity Instance: in_out_elem:\gen1:9:s_port_module
+ 28. Parameter Settings for User Entity Instance: in_out_elem:\gen1:10:s_port_module
+ 29. Parameter Settings for User Entity Instance: in_out_elem:\gen1:11:s_port_module
+ 30. Parameter Settings for User Entity Instance: in_out_elem:\gen1:12:s_port_module
+ 31. Parameter Settings for User Entity Instance: in_out_elem:\gen1:13:s_port_module
+ 32. Parameter Settings for User Entity Instance: in_out_elem:\gen1:14:s_port_module
+ 33. Parameter Settings for User Entity Instance: in_out_elem:\gen1:15:s_port_module
+ 34. Parameter Settings for User Entity Instance: in_out_elem:\gen1:16:s_port_module
+ 35. Parameter Settings for User Entity Instance: in_out_elem:\gen1:17:s_port_module
+ 36. Parameter Settings for User Entity Instance: in_out_elem:\gen1:18:s_port_module
+ 37. Parameter Settings for User Entity Instance: in_out_elem:\gen1:19:s_port_module
+ 38. Parameter Settings for User Entity Instance: in_out_elem:\gen1:20:s_port_module
+ 39. Parameter Settings for User Entity Instance: in_out_elem:\gen1:21:s_port_module
+ 40. Parameter Settings for User Entity Instance: in_out_elem:\gen1:22:s_port_module
+ 41. Parameter Settings for User Entity Instance: in_out_elem:\gen1:23:s_port_module
+ 42. Parameter Settings for User Entity Instance: in_out_elem:\gen1:24:s_port_module
+ 43. Parameter Settings for User Entity Instance: in_out_elem:\gen1:25:s_port_module
+ 44. Parameter Settings for User Entity Instance: in_out_elem:\gen1:26:s_port_module
+ 45. Parameter Settings for User Entity Instance: in_out_elem:\gen1:27:s_port_module
+ 46. Parameter Settings for User Entity Instance: in_out_elem:\gen1:28:s_port_module
+ 47. Parameter Settings for User Entity Instance: in_out_elem:\gen1:29:s_port_module
+ 48. Parameter Settings for User Entity Instance: in_out_elem:\gen1:30:s_port_module
+ 49. Parameter Settings for User Entity Instance: in_out_elem:\gen1:31:s_port_module
+ 50. Parameter Settings for User Entity Instance: in_out_elem:\gen1:32:s_port_module
+ 51. Parameter Settings for User Entity Instance: in_out_elem:\gen1:33:s_port_module
+ 52. Parameter Settings for User Entity Instance: in_out_elem:\gen1:34:s_port_module
+ 53. Parameter Settings for User Entity Instance: in_out_elem:\gen1:35:s_port_module
+ 54. Parameter Settings for User Entity Instance: in_out_elem:\gen1:36:s_port_module
+ 55. Parameter Settings for User Entity Instance: in_out_elem:\gen1:37:s_port_module
+ 56. Parameter Settings for User Entity Instance: in_out_elem:\gen1:38:s_port_module
+ 57. Parameter Settings for User Entity Instance: in_out_elem:\gen1:39:s_port_module
+ 58. Parameter Settings for User Entity Instance: in_out_elem:\gen1:40:s_port_module
+ 59. Parameter Settings for User Entity Instance: in_out_elem:\gen1:41:s_port_module
+ 60. Parameter Settings for User Entity Instance: in_out_elem:\gen1:42:s_port_module
+ 61. Parameter Settings for User Entity Instance: in_out_elem:\gen1:43:s_port_module
+ 62. Parameter Settings for User Entity Instance: in_out_elem:\gen1:44:s_port_module
+ 63. Parameter Settings for User Entity Instance: in_out_elem:\gen1:45:s_port_module
+ 64. Parameter Settings for User Entity Instance: in_out_elem:\gen1:46:s_port_module
+ 65. Parameter Settings for User Entity Instance: in_out_elem:\gen1:47:s_port_module
+ 66. Parameter Settings for User Entity Instance: in_out_elem:\gen1:48:s_port_module
+ 67. Parameter Settings for User Entity Instance: in_out_elem:\gen1:49:s_port_module
+ 68. Parameter Settings for User Entity Instance: in_out_elem:\gen1:50:s_port_module
+ 69. Parameter Settings for User Entity Instance: in_out_elem:\gen1:51:s_port_module
+ 70. Parameter Settings for User Entity Instance: in_out_elem:\gen1:52:s_port_module
+ 71. Parameter Settings for User Entity Instance: in_out_elem:\gen1:53:s_port_module
+ 72. Parameter Settings for User Entity Instance: in_out_elem:\gen1:54:s_port_module
+ 73. Parameter Settings for User Entity Instance: in_out_elem:\gen1:55:s_port_module
+ 74. Parameter Settings for User Entity Instance: in_out_elem:\gen1:56:s_port_module
+ 75. Parameter Settings for User Entity Instance: in_out_elem:\gen1:57:s_port_module
+ 76. Parameter Settings for User Entity Instance: in_out_elem:\gen1:58:s_port_module
+ 77. Parameter Settings for User Entity Instance: in_out_elem:\gen1:59:s_port_module
+ 78. Parameter Settings for User Entity Instance: in_out_elem:\gen1:60:s_port_module
+ 79. Parameter Settings for User Entity Instance: in_out_elem:\gen1:61:s_port_module
+ 80. Parameter Settings for User Entity Instance: in_out_elem:\gen1:62:s_port_module
+ 81. Parameter Settings for User Entity Instance: in_out_elem:\gen1:63:s_port_module
+ 82. Parameter Settings for User Entity Instance: mem1:mem1_mod|altdpram:altdpram_component
+ 83. Port Connectivity Checks: "gen:gen_module"
+ 84. Post-Synthesis Netlist Statistics for Top Partition
+ 85. Elapsed Time Per Partition
+ 86. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 23 09:38:40 2021       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; dec_to_ram                                  ;
+; Top-level Entity Name              ; stand_ki_v1                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 6,124                                       ;
+;     Total combinational functions  ; 5,907                                       ;
+;     Dedicated logic registers      ; 2,704                                       ;
+; Total registers                    ; 2704                                        ;
+; Total pins                         ; 138                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 4,096                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                                      ; stand_ki_v1        ; dec_to_ram         ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------+---------+
+; stand_ki_v1.vhd                  ; yes             ; Auto-Found VHDL File              ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd               ;         ;
+; stand_test.vhd                   ; yes             ; Auto-Found VHDL File              ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_test.vhd                ;         ;
+; gen.vhd                          ; yes             ; Auto-Found VHDL File              ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/gen.vhd                       ;         ;
+; control_4.vhd                    ; yes             ; Auto-Found VHDL File              ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/control_4.vhd                 ;         ;
+; in_out_elem.vhd                  ; yes             ; Auto-Found VHDL File              ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/in_out_elem.vhd               ;         ;
+; mem1.vhd                         ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd                      ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.tdf          ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/others/maxplus2/memmodes.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_hdffe.inc           ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc   ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.inc        ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; altrom.inc                       ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                      ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_2lp1.tdf           ; yes             ; Auto-Generated Megafunction       ; C:/Users/Budkova/Documents/Quartus/stand_ki_v1/db/altsyncram_2lp1.tdf        ;         ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 6,124       ;
+;                                             ;             ;
+; Total combinational functions               ; 5907        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 1660        ;
+;     -- 3 input functions                    ; 1637        ;
+;     -- <=2 input functions                  ; 2610        ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 3706        ;
+;     -- arithmetic mode                      ; 2201        ;
+;                                             ;             ;
+; Total registers                             ; 2704        ;
+;     -- Dedicated logic registers            ; 2704        ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 138         ;
+; Total memory bits                           ; 4096        ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; p_CLK~input ;
+; Maximum fan-out                             ; 2756        ;
+; Total fan-out                               ; 23432       ;
+; Average fan-out                             ; 2.60        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                   ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |stand_ki_v1                                 ; 5907 (194)          ; 2704 (0)                  ; 4096        ; 0            ; 0       ; 0         ; 138  ; 0            ; |stand_ki_v1                                                                                               ; stand_ki_v1     ; work         ;
+;    |control_4:control_4_module|              ; 113 (113)           ; 68 (68)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|control_4:control_4_module                                                                    ; control_4       ; work         ;
+;    |gen:gen_module|                          ; 387 (387)           ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|gen:gen_module                                                                                ; gen             ; work         ;
+;    |in_out_elem:\gen1:0:s_port_module|       ; 79 (79)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:0:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:10:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:10:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:11:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:11:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:12:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:12:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:13:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:13:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:14:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:14:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:15:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:15:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:16:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:16:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:17:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:17:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:18:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:18:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:19:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:19:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:1:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:1:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:20:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:20:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:21:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:21:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:22:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:22:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:23:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:23:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:24:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:24:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:25:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:25:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:26:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:26:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:27:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:27:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:28:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:28:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:29:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:29:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:2:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:2:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:30:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:30:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:31:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:31:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:32:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:32:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:33:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:33:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:34:s_port_module|      ; 77 (77)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:34:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:35:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:35:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:36:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:36:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:37:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:37:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:38:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:38:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:39:s_port_module|      ; 79 (79)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:39:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:3:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:3:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:40:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:40:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:41:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:41:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:42:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:42:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:43:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:43:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:44:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:44:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:45:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:45:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:46:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:46:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:47:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:47:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:48:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:48:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:49:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:49:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:4:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:4:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:50:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:50:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:51:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:51:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:52:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:52:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:53:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:53:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:54:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:54:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:55:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:55:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:56:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:56:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:57:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:57:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:58:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:58:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:59:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:59:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:5:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:5:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:60:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:60:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:61:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:61:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:62:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:62:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:63:s_port_module|      ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:63:s_port_module                                                            ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:6:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:6:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:7:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:7:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:8:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:8:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |in_out_elem:\gen1:9:s_port_module|       ; 78 (78)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|in_out_elem:\gen1:9:s_port_module                                                             ; in_out_elem     ; work         ;
+;    |mem1:mem1_mod|                           ; 1 (0)               ; 1 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|mem1:mem1_mod                                                                                 ; mem1            ; work         ;
+;       |altdpram:altdpram_component|          ; 1 (0)               ; 1 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|mem1:mem1_mod|altdpram:altdpram_component                                                     ; altdpram        ; work         ;
+;          |altsyncram:ram_block|              ; 1 (0)               ; 1 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block                                ; altsyncram      ; work         ;
+;             |altsyncram_2lp1:auto_generated| ; 1 (1)               ; 1 (1)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block|altsyncram_2lp1:auto_generated ; altsyncram_2lp1 ; work         ;
+;    |stand_test:self_test_module|             ; 219 (219)           ; 211 (211)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |stand_ki_v1|stand_test:self_test_module                                                                   ; stand_test      ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                             ;
++----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                     ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block|altsyncram_2lp1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 64           ; 64           ; 64           ; 64           ; 4096 ; None ;
++----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |stand_ki_v1|control_4:control_4_module|s_FSM                                                                                                                                                                    ;
++----------------------------+--------------------+---------------------+-------------------+-------------------------+----------------------------+-------------------+-------------------+-----------------------+---------------+
+; Name                       ; s_FSM.st_imp_delay ; s_FSM.st_pack_delay ; s_FSM.st_out_data ; s_FSM.st_check_end_pack ; s_FSM.st_delay_after_laser ; s_FSM.st_wait_las ; s_FSM.st_continue ; s_FSM.st_set_new_mode ; s_FSM.st_idle ;
++----------------------------+--------------------+---------------------+-------------------+-------------------------+----------------------------+-------------------+-------------------+-----------------------+---------------+
+; s_FSM.st_idle              ; 0                  ; 0                   ; 0                 ; 0                       ; 0                          ; 0                 ; 0                 ; 0                     ; 0             ;
+; s_FSM.st_set_new_mode      ; 0                  ; 0                   ; 0                 ; 0                       ; 0                          ; 0                 ; 0                 ; 1                     ; 1             ;
+; s_FSM.st_continue          ; 0                  ; 0                   ; 0                 ; 0                       ; 0                          ; 0                 ; 1                 ; 0                     ; 1             ;
+; s_FSM.st_wait_las          ; 0                  ; 0                   ; 0                 ; 0                       ; 0                          ; 1                 ; 0                 ; 0                     ; 1             ;
+; s_FSM.st_delay_after_laser ; 0                  ; 0                   ; 0                 ; 0                       ; 1                          ; 0                 ; 0                 ; 0                     ; 1             ;
+; s_FSM.st_check_end_pack    ; 0                  ; 0                   ; 0                 ; 1                       ; 0                          ; 0                 ; 0                 ; 0                     ; 1             ;
+; s_FSM.st_out_data          ; 0                  ; 0                   ; 1                 ; 0                       ; 0                          ; 0                 ; 0                 ; 0                     ; 1             ;
+; s_FSM.st_pack_delay        ; 0                  ; 1                   ; 0                 ; 0                       ; 0                          ; 0                 ; 0                 ; 0                     ; 1             ;
+; s_FSM.st_imp_delay         ; 1                  ; 0                   ; 0                 ; 0                       ; 0                          ; 0                 ; 0                 ; 0                     ; 1             ;
++----------------------------+--------------------+---------------------+-------------------+-------------------------+----------------------------+-------------------+-------------------+-----------------------+---------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------+
+; State Machine - |stand_ki_v1|stand_test:self_test_module|s_FSM               ;
++----------------+--------------+----------------+--------------+--------------+
+; Name           ; s_FSM.st_imp ; s_FSM.st_delay ; s_FSM.st_las ; s_FSM.st_gen ;
++----------------+--------------+----------------+--------------+--------------+
+; s_FSM.st_gen   ; 0            ; 0              ; 0            ; 0            ;
+; s_FSM.st_las   ; 0            ; 0              ; 1            ; 1            ;
+; s_FSM.st_delay ; 0            ; 1              ; 0            ; 1            ;
+; s_FSM.st_imp   ; 1            ; 0              ; 0            ; 1            ;
++----------------+--------------+----------------+--------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++-------------------------------------------------------------------+----------------------------------------------------------+
+; Register name                                                     ; Reason for Removal                                       ;
++-------------------------------------------------------------------+----------------------------------------------------------+
+; stand_test:self_test_module|s_LAS_FILTER[3]                       ; Merged with control_4:control_4_module|s_LASER_FILTER[3] ;
+; gen:gen_module|\out_impulse:v_reg_freq[1,2,5,7,12,13,15,17,20,21] ; Merged with gen:gen_module|\out_impulse:v_reg_freq[0]    ;
+; gen:gen_module|\out_impulse:v_reg_freq[9]                         ; Merged with gen:gen_module|\out_impulse:v_reg_freq[6]    ;
+; gen:gen_module|\out_impulse:v_reg_freq[18,19,22]                  ; Merged with gen:gen_module|\out_impulse:v_reg_freq[8]    ;
+; gen:gen_module|\out_impulse:v_reg_freq[16]                        ; Merged with gen:gen_module|\out_impulse:v_reg_freq[10]   ;
+; gen:gen_module|\out_impulse:v_reg_freq[14]                        ; Merged with gen:gen_module|\out_impulse:v_reg_freq[11]   ;
+; control_4:control_4_module|s_LASER_FILTER[2]                      ; Merged with stand_test:self_test_module|s_LAS_FILTER[2]  ;
+; stand_test:self_test_module|s_LAS_FILTER[1]                       ; Merged with control_4:control_4_module|s_LASER_FILTER[1] ;
+; control_4:control_4_module|s_LASER_FILTER[0]                      ; Merged with stand_test:self_test_module|s_LAS_FILTER[0]  ;
+; gen:gen_module|\out_impulse:v_reg_freq[0]                         ; Stuck at GND due to stuck port data_in                   ;
+; Total Number of Removed Registers = 21                            ;                                                          ;
++-------------------------------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2704  ;
+; Number of registers using Synchronous Clear  ; 42    ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 194   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                  ;
++---------------------------------------------------------------------+---------+
+; Inverted Register                                                   ; Fan out ;
++---------------------------------------------------------------------+---------+
+; gen:gen_module|change_delay_dwn[4]                                  ; 2       ;
+; gen:gen_module|change_delay_up[4]                                   ; 2       ;
+; gen:gen_module|change_delay_dwn[3]                                  ; 2       ;
+; gen:gen_module|change_delay_up[3]                                   ; 2       ;
+; gen:gen_module|change_delay_up[0]                                   ; 3       ;
+; gen:gen_module|change_delay_dwn[0]                                  ; 3       ;
+; stand_test:self_test_module|s_BASE_DATA[0]                          ; 1       ;
+; gen:gen_module|\out_impulse:v_count_delay_before_end_test_strobe[1] ; 3       ;
+; gen:gen_module|\out_impulse:v_count_delay_before_end_test_strobe[3] ; 2       ;
+; stand_test:self_test_module|s_BASE_DATA[1]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[2]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[3]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[4]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[5]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[6]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[7]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[8]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[9]                          ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[10]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[11]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[12]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[13]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[14]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[15]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[16]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[17]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[18]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[19]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[20]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[21]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[22]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[23]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[24]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[25]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[26]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[27]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[28]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[29]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[30]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[31]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[32]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[33]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[34]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[35]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[36]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[37]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[38]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[39]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[40]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[41]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[42]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[43]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[44]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[45]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[46]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[47]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[48]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[49]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[50]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[51]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[52]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[53]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[54]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[55]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[56]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[57]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[58]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[59]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[60]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[61]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[62]                         ; 1       ;
+; stand_test:self_test_module|s_BASE_DATA[63]                         ; 1       ;
+; stand_test:self_test_module|s_OUT_PORT[1]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[2]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[3]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[4]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[5]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[6]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[7]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[8]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[9]                           ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[10]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[11]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[12]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[13]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[14]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[15]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[16]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[17]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[18]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[19]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[20]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[21]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[22]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[23]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[24]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[25]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[26]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[27]                          ; 2       ;
+; stand_test:self_test_module|s_OUT_PORT[28]                          ; 2       ;
+; Total number of inverted registers = 135*                           ;         ;
++---------------------------------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |stand_ki_v1|gen:gen_module|\out_impulse:v_counter[6]      ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:18:s_port_module|p_o_imp    ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:0:s_port_module|s_COUT[0]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:1:s_port_module|s_COUT[28]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:2:s_port_module|s_COUT[1]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:3:s_port_module|s_COUT[29]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:4:s_port_module|s_COUT[0]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:5:s_port_module|s_COUT[31]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:6:s_port_module|s_COUT[28]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:7:s_port_module|s_COUT[29]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:8:s_port_module|s_COUT[0]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:9:s_port_module|s_COUT[7]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:10:s_port_module|s_COUT[7]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:11:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:12:s_port_module|s_COUT[21] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:13:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:14:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:15:s_port_module|s_COUT[3]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:16:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:17:s_port_module|s_COUT[30] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:18:s_port_module|s_COUT[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:19:s_port_module|s_COUT[12] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:20:s_port_module|s_COUT[13] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:21:s_port_module|s_COUT[7]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:22:s_port_module|s_COUT[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:23:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:24:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:25:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:26:s_port_module|s_COUT[0]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:27:s_port_module|s_COUT[8]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:28:s_port_module|s_COUT[10] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:29:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:30:s_port_module|s_COUT[15] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:31:s_port_module|s_COUT[4]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:32:s_port_module|s_COUT[3]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:33:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:34:s_port_module|s_COUT[26] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:35:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:36:s_port_module|s_COUT[17] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:37:s_port_module|s_COUT[30] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:38:s_port_module|s_COUT[27] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:39:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:40:s_port_module|s_COUT[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:41:s_port_module|s_COUT[31] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:42:s_port_module|s_COUT[4]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:43:s_port_module|s_COUT[8]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:44:s_port_module|s_COUT[30] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:45:s_port_module|s_COUT[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:46:s_port_module|s_COUT[16] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:47:s_port_module|s_COUT[13] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:48:s_port_module|s_COUT[31] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:49:s_port_module|s_COUT[15] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:50:s_port_module|s_COUT[18] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:51:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:52:s_port_module|s_COUT[3]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:53:s_port_module|s_COUT[28] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:54:s_port_module|s_COUT[27] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:55:s_port_module|s_COUT[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:56:s_port_module|s_COUT[28] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:57:s_port_module|s_COUT[4]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:58:s_port_module|s_COUT[1]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:59:s_port_module|s_COUT[15] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:60:s_port_module|s_COUT[25] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:61:s_port_module|s_COUT[31] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:62:s_port_module|s_COUT[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |stand_ki_v1|in_out_elem:\gen1:63:s_port_module|s_COUT[0]  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |stand_ki_v1|gen:gen_module|imp_gen                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |stand_ki_v1|control_4:control_4_module|s_PACK_COUNT[0]    ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |stand_ki_v1|stand_test:self_test_module|s_CNT[0]          ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; Yes        ; |stand_ki_v1|control_4:control_4_module|s_ADDR[5]          ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |stand_ki_v1|control_4:control_4_module|p_o_io_src[1]      ;
+; 13:1               ; 24 bits   ; 192 LEs       ; 24 LEs               ; 168 LEs                ; Yes        ; |stand_ki_v1|control_4:control_4_module|s_COUNT[22]        ;
+; 3:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |stand_ki_v1|stand_test:self_test_module|s_OUT_PORT[27]    ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |stand_ki_v1|s_IN_DATA[17]                                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |stand_ki_v1|gen:gen_module|v_reg_freq                     ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |stand_ki_v1|control_4:control_4_module|Selector8          ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |stand_ki_v1|control_4:control_4_module|Selector11         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block|altsyncram_2lp1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                     ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                      ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gen:gen_module ;
++-------------------------+---------+-------------------------+
+; Parameter Name          ; Value   ; Type                    ;
++-------------------------+---------+-------------------------+
+; c_length_impulse_gen    ; 50      ; Signed Integer          ;
+; c_length_impulse_laser  ; 25      ; Signed Integer          ;
+; c_delay_laser_after_gen ; 110     ; Signed Integer          ;
+; c_impulse_period        ; 600     ; Signed Integer          ;
+; c_period_between_pack   ; 85000   ; Signed Integer          ;
+; c_base_work             ; 5000000 ; Signed Integer          ;
++-------------------------+---------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: control_4:control_4_module ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; c_imp_delay    ; 5000000  ; Signed Integer                              ;
+; c_pack_delay   ; 15000000 ; Signed Integer                              ;
+; c_wren_delay   ; 400      ; Signed Integer                              ;
+; c_wren_len     ; 420      ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:0:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:1:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:2:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:3:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:4:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:5:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:6:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:7:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:8:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:9:s_port_module ;
++----------------+---------+-----------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                ;
++----------------+---------+-----------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                      ;
++----------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:10:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:11:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:12:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:13:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:14:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:15:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:16:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:17:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:18:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:19:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:20:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:21:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:22:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:23:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:24:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:25:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:26:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:27:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:28:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:29:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:30:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:31:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:32:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:33:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:34:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:35:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:36:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:37:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:38:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:39:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:40:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:41:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:42:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:43:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:44:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:45:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:46:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:47:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:48:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:49:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:50:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:51:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:52:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:53:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:54:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:55:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:56:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:57:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:58:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:59:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:60:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:61:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:62:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: in_out_elem:\gen1:63:s_port_module ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; c_lem_imp      ; 4500000 ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mem1:mem1_mod|altdpram:altdpram_component ;
++-------------------------------------+--------------+-----------------------------------+
+; Parameter Name                      ; Value        ; Type                              ;
++-------------------------------------+--------------+-----------------------------------+
+; WIDTH_BYTEENA_A                     ; 1            ; Untyped                           ;
+; WIDTH_BYTEENA_B                     ; 1            ; Untyped                           ;
+; WIDTH_ECCSTATUS                     ; 3            ; Untyped                           ;
+; WIDTH                               ; 64           ; Signed Integer                    ;
+; WIDTHAD                             ; 6            ; Signed Integer                    ;
+; NUMWORDS                            ; 64           ; Untyped                           ;
+; FILE                                ; UNUSED       ; Untyped                           ;
+; LPM_FILE                            ; UNUSED       ; Untyped                           ;
+; INDATA_REG                          ; INCLOCK      ; Untyped                           ;
+; INDATA_ACLR                         ; OFF          ; Untyped                           ;
+; WRADDRESS_REG                       ; INCLOCK      ; Untyped                           ;
+; WRADDRESS_ACLR                      ; OFF          ; Untyped                           ;
+; WRCONTROL_REG                       ; INCLOCK      ; Untyped                           ;
+; WRCONTROL_ACLR                      ; OFF          ; Untyped                           ;
+; RDADDRESS_REG                       ; INCLOCK      ; Untyped                           ;
+; RDADDRESS_ACLR                      ; OFF          ; Untyped                           ;
+; RDCONTROL_REG                       ; INCLOCK      ; Untyped                           ;
+; RDCONTROL_ACLR                      ; OFF          ; Untyped                           ;
+; OUTDATA_REG                         ; UNREGISTERED ; Untyped                           ;
+; OUTDATA_ACLR                        ; OFF          ; Untyped                           ;
+; OUTDATA_SCLR                        ; ON           ; Untyped                           ;
+; USE_EAB                             ; ON           ; Untyped                           ;
+; MAXIMUM_DEPTH                       ; 2048         ; Untyped                           ;
+; DEVICE_FAMILY                       ; Cyclone IV E ; Untyped                           ;
+; SUPPRESS_MEMORY_CONVERSION_WARNINGS ; OFF          ; Untyped                           ;
+; INTENDED_DEVICE_FAMILY              ; FLEX10KE     ; Untyped                           ;
+; ENABLE_RAM_BENCHMARKING_MODE        ; OFF          ; Untyped                           ;
+; RAM_BLOCK_TYPE                      ; AUTO         ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS  ; DONT_CARE    ; Untyped                           ;
+; BYTE_SIZE                           ; 8            ; Untyped                           ;
+; WIDTH_BYTEENA                       ; 1            ; Untyped                           ;
+; DISABLE_LE_RAM_LIMIT_CHECK          ; OFF          ; Untyped                           ;
+; CBXI_PARAMETER                      ; dpram_6fh1   ; Untyped                           ;
+; AUTO_CARRY_CHAINS                   ; ON           ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS                ; OFF          ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                 ; ON           ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS              ; OFF          ; IGNORE_CASCADE                    ;
++-------------------------------------+--------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "gen:gen_module"                                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_end_pack ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 138                         ;
+; cycloneiii_ff         ; 2704                        ;
+;     ENA               ; 153                         ;
+;     ENA SCLR          ; 41                          ;
+;     SCLR              ; 1                           ;
+;     SLD               ; 64                          ;
+;     plain             ; 2445                        ;
+; cycloneiii_io_obuf    ; 64                          ;
+; cycloneiii_lcell_comb ; 5907                        ;
+;     arith             ; 2201                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2047                        ;
+;         3 data inputs ; 153                         ;
+;     normal            ; 3706                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 142                         ;
+;         2 data inputs ; 418                         ;
+;         3 data inputs ; 1484                        ;
+;         4 data inputs ; 1660                        ;
+; cycloneiii_ram_block  ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 4.37                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:10     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Apr 23 09:38:17 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off stand_ki_v1 -c dec_to_ram
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (12019): Can't analyze file -- file mem_mod_gen.vhd is missing
+Info (12021): Found 0 design units, including 0 entities, in source file dec_to_ram.vhd
+Warning (12019): Can't analyze file -- file channel_imp_module2.vhd is missing
+Warning (12125): Using design file stand_ki_v1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: stand_ki_v1-dec_to_ram_tb_behav File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 40
+    Info (12023): Found entity 1: stand_ki_v1 File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 10
+Info (12127): Elaborating entity "stand_ki_v1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at stand_ki_v1.vhd(138): object "s_END_PACK_GEN" assigned a value but never read File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 138
+Warning (12125): Using design file stand_test.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: stand_test-stand_test_behav File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_test.vhd Line: 29
+    Info (12023): Found entity 1: stand_test File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_test.vhd Line: 20
+Info (12128): Elaborating entity "stand_test" for hierarchy "stand_test:self_test_module" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 182
+Warning (12125): Using design file gen.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: gen-gen_synt File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/gen.vhd Line: 33
+    Info (12023): Found entity 1: gen File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/gen.vhd Line: 6
+Info (12128): Elaborating entity "gen" for hierarchy "gen:gen_module" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 192
+Warning (12125): Using design file control_4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: control_4-control_4_behav File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/control_4.vhd Line: 41
+    Info (12023): Found entity 1: control_4 File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/control_4.vhd Line: 7
+Info (12128): Elaborating entity "control_4" for hierarchy "control_4:control_4_module" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 206
+Warning (12125): Using design file in_out_elem.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: in_out_elem-in_out_elem_behav File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/in_out_elem.vhd Line: 19
+    Info (12023): Found entity 1: in_out_elem File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/in_out_elem.vhd Line: 8
+Info (12128): Elaborating entity "in_out_elem" for hierarchy "in_out_elem:\gen1:0:s_port_module" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 231
+Warning (12125): Using design file mem1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mem1-SYN File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd Line: 56
+    Info (12023): Found entity 1: mem1 File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd Line: 42
+Info (12128): Elaborating entity "mem1" for hierarchy "mem1:mem1_mod" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/stand_ki_v1.vhd Line: 240
+Info (12128): Elaborating entity "altdpram" for hierarchy "mem1:mem1_mod|altdpram:altdpram_component" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd Line: 95
+Warning (287001): Assertion warning: altdpram does not support Cyclone IV E device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone IV E devices File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.tdf Line: 424
+Info (12130): Elaborated megafunction instantiation "mem1:mem1_mod|altdpram:altdpram_component" File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd Line: 95
+Info (12133): Instantiated megafunction "mem1:mem1_mod|altdpram:altdpram_component" with the following parameter: File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/mem1.vhd Line: 95
+    Info (12134): Parameter "indata_aclr" = "OFF"
+    Info (12134): Parameter "indata_reg" = "INCLOCK"
+    Info (12134): Parameter "intended_device_family" = "FLEX10KE"
+    Info (12134): Parameter "lpm_type" = "altdpram"
+    Info (12134): Parameter "outdata_aclr" = "OFF"
+    Info (12134): Parameter "outdata_reg" = "UNREGISTERED"
+    Info (12134): Parameter "rdaddress_aclr" = "OFF"
+    Info (12134): Parameter "rdaddress_reg" = "INCLOCK"
+    Info (12134): Parameter "rdcontrol_aclr" = "OFF"
+    Info (12134): Parameter "rdcontrol_reg" = "INCLOCK"
+    Info (12134): Parameter "width" = "64"
+    Info (12134): Parameter "widthad" = "6"
+    Info (12134): Parameter "wraddress_aclr" = "OFF"
+    Info (12134): Parameter "wraddress_reg" = "INCLOCK"
+    Info (12134): Parameter "wrcontrol_aclr" = "OFF"
+    Info (12134): Parameter "wrcontrol_reg" = "INCLOCK"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.tdf Line: 206
+Info (12131): Elaborated megafunction instantiation "mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block", which is child of megafunction instantiation "mem1:mem1_mod|altdpram:altdpram_component" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.tdf Line: 206
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2lp1.tdf
+    Info (12023): Found entity 1: altsyncram_2lp1 File: C:/Users/Budkova/Documents/Quartus/stand_ki_v1/db/altsyncram_2lp1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2lp1" for hierarchy "mem1:mem1_mod|altdpram:altdpram_component|altsyncram:ram_block|altsyncram_2lp1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6397 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 66 output pins
+    Info (21060): Implemented 64 bidirectional pins
+    Info (21061): Implemented 6195 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Fri Apr 23 09:38:40 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:35
+
+

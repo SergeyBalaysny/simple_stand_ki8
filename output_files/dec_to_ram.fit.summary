@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Apr 23 09:39:07 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : dec_to_ram
+Top-level Entity Name : stand_ki_v1
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 6,113 / 10,320 ( 59 % )
+    Total combinational functions : 5,907 / 10,320 ( 57 % )
+    Dedicated logic registers : 2,704 / 10,320 ( 26 % )
+Total registers : 2704
+Total pins : 138 / 180 ( 77 % )
+Total virtual pins : 0
+Total memory bits : 4,096 / 423,936 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

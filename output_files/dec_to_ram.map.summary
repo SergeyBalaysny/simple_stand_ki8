@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr 23 09:38:40 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : dec_to_ram
+Top-level Entity Name : stand_ki_v1
+Family : Cyclone IV E
+Total logic elements : 6,124
+    Total combinational functions : 5,907
+    Dedicated logic registers : 2,704
+Total registers : 2704
+Total pins : 138
+Total virtual pins : 0
+Total memory bits : 4,096
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

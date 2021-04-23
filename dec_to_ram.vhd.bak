@@ -1,0 +1,38 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+entity dec_to_ram_tb is
+end entity ; -- dec_to_ram_tb
+
+
+
+	component channel_imp_module2 is
+	  port (
+	  			p_clk:				in std_logic;			
+	  			p_imp:				in std_logic;						-- входной импульс
+	  			p_i_rst:			in std_logic;						-- сигнал сброса
+	  			p_i_stop:			in std_logic; 						-- сигнал ококнчания проверки
+	  			p_o_addr:			out std_logic_vector(4 downto 0); 	-- текущий адрес памяти
+	  			p_o_frontback:		out std_logic;						-- бит перезнего - 1 /заднего - 0 фронтов
+	  			p_o_wren:			out std_logic 						-- сигнал разрешения записи
+	  ) ;
+	end component ; -- channel_imp_module
+
+
+architecture dec_to_ram_tb_behav of dec_to_ram_tb is
+
+	SIGNAL s_CLK: std_logic;
+	
+
+	
+begin
+
+end architecture ; -- 

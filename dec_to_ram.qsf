@@ -1,0 +1,195 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 10:29:36  May 08, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		dec_to_ram_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY stand_ki_v1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:29:36  MAY 08, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VHDL_FILE mem_mod_gen.vhd
+set_global_assignment -name VHDL_FILE dec_to_ram.vhd
+set_global_assignment -name VHDL_FILE channel_imp_module2.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_E16 -to p_CLK
+set_location_assignment PIN_L7 -to p_EXT_CNTRL_BUTTON_CONT
+set_location_assignment PIN_R10 -to p_EXT_CNTRL_BUTTON_FOUR
+set_location_assignment PIN_P9 -to p_EXT_CNTRL_BUTTON_OFF
+set_location_assignment PIN_M6 -to p_EXT_CNTRL_BUTTON_RUN
+set_location_assignment PIN_R9 -to p_EXT_GEN_BUTTON_DWN
+set_location_assignment PIN_P11 -to p_EXT_GEN_BUTTON_UP
+set_location_assignment PIN_R11 -to p_EXT_IMP_GEN
+set_location_assignment PIN_N12 -to p_EXT_IMP_LASER
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_R12 -to p_EXT_INP_PORT_VECTOR[0]
+set_location_assignment PIN_G16 -to p_EXT_INP_PORT_VECTOR[1]
+set_location_assignment PIN_R13 -to p_EXT_INP_PORT_VECTOR[2]
+set_location_assignment PIN_T12 -to p_EXT_INP_PORT_VECTOR[3]
+set_location_assignment PIN_R14 -to p_EXT_INP_PORT_VECTOR[4]
+set_location_assignment PIN_T13 -to p_EXT_INP_PORT_VECTOR[5]
+set_location_assignment PIN_R16 -to p_EXT_INP_PORT_VECTOR[6]
+set_location_assignment PIN_T14 -to p_EXT_INP_PORT_VECTOR[7]
+set_location_assignment PIN_P16 -to p_EXT_INP_PORT_VECTOR[8]
+set_location_assignment PIN_T15 -to p_EXT_INP_PORT_VECTOR[9]
+set_location_assignment PIN_N16 -to p_EXT_INP_PORT_VECTOR[10]
+set_location_assignment PIN_P15 -to p_EXT_INP_PORT_VECTOR[11]
+set_location_assignment PIN_L16 -to p_EXT_INP_PORT_VECTOR[12]
+set_location_assignment PIN_N15 -to p_EXT_INP_PORT_VECTOR[13]
+set_location_assignment PIN_K16 -to p_EXT_INP_PORT_VECTOR[14]
+set_location_assignment PIN_L15 -to p_EXT_INP_PORT_VECTOR[15]
+set_location_assignment PIN_J16 -to p_EXT_INP_PORT_VECTOR[16]
+set_location_assignment PIN_F15 -to p_EXT_INP_PORT_VECTOR[20]
+set_location_assignment PIN_N13 -to p_EXT_INP_PORT_VECTOR[24]
+set_location_assignment PIN_M12 -to p_EXT_INP_PORT_VECTOR[28]
+set_location_assignment PIN_L11 -to p_EXT_INP_PORT_VECTOR[32]
+set_location_assignment PIN_J11 -to p_EXT_INP_PORT_VECTOR[36]
+set_location_assignment PIN_F13 -to p_EXT_INP_PORT_VECTOR[40]
+set_location_assignment PIN_C16 -to p_EXT_INP_PORT_VECTOR[44]
+set_location_assignment PIN_A15 -to p_EXT_INP_PORT_VECTOR[48]
+set_location_assignment PIN_E11 -to p_EXT_INP_PORT_VECTOR[52]
+set_location_assignment PIN_A13 -to p_EXT_INP_PORT_VECTOR[56]
+set_location_assignment PIN_B11 -to p_EXT_INP_PORT_VECTOR[60]
+set_location_assignment PIN_A10 -to p_EXT_INP_PORT_VECTOR[61]
+set_location_assignment PIN_B12 -to p_EXT_INP_PORT_VECTOR[57]
+set_location_assignment PIN_F10 -to p_EXT_INP_PORT_VECTOR[53]
+set_location_assignment PIN_C14 -to p_EXT_INP_PORT_VECTOR[49]
+set_location_assignment PIN_D15 -to p_EXT_INP_PORT_VECTOR[45]
+set_location_assignment PIN_J14 -to p_EXT_INP_PORT_VECTOR[41]
+set_location_assignment PIN_K11 -to p_EXT_INP_PORT_VECTOR[37]
+set_location_assignment PIN_J13 -to p_EXT_INP_PORT_VECTOR[33]
+set_location_assignment PIN_L13 -to p_EXT_INP_PORT_VECTOR[29]
+set_location_assignment PIN_M11 -to p_EXT_INP_PORT_VECTOR[25]
+set_location_assignment PIN_C8 -to p_EXT_INP_PORT_VECTOR[21]
+set_location_assignment PIN_K15 -to p_EXT_INP_PORT_VECTOR[17]
+set_location_assignment PIN_G15 -to p_EXT_INP_PORT_VECTOR[18]
+set_location_assignment PIN_M10 -to p_EXT_INP_PORT_VECTOR[22]
+set_location_assignment PIN_N14 -to p_EXT_INP_PORT_VECTOR[26]
+set_location_assignment PIN_L14 -to p_EXT_INP_PORT_VECTOR[30]
+set_location_assignment PIN_J12 -to p_EXT_INP_PORT_VECTOR[34]
+set_location_assignment PIN_F11 -to p_EXT_INP_PORT_VECTOR[38]
+set_location_assignment PIN_D16 -to p_EXT_INP_PORT_VECTOR[42]
+set_location_assignment PIN_D14 -to p_EXT_INP_PORT_VECTOR[46]
+set_location_assignment PIN_B14 -to p_EXT_INP_PORT_VECTOR[50]
+set_location_assignment PIN_A14 -to p_EXT_INP_PORT_VECTOR[54]
+set_location_assignment PIN_A12 -to p_EXT_INP_PORT_VECTOR[58]
+set_location_assignment PIN_D9 -to p_EXT_INP_PORT_VECTOR[62]
+set_location_assignment PIN_J15 -to p_EXT_INP_PORT_VECTOR[19]
+set_location_assignment PIN_L10 -to p_EXT_INP_PORT_VECTOR[23]
+set_location_assignment PIN_P14 -to p_EXT_INP_PORT_VECTOR[27]
+set_location_assignment PIN_L12 -to p_EXT_INP_PORT_VECTOR[31]
+set_location_assignment PIN_K12 -to p_EXT_INP_PORT_VECTOR[35]
+set_location_assignment PIN_K10 -to p_EXT_INP_PORT_VECTOR[39]
+set_location_assignment PIN_F14 -to p_EXT_INP_PORT_VECTOR[43]
+set_location_assignment PIN_C15 -to p_EXT_INP_PORT_VECTOR[47]
+set_location_assignment PIN_D11 -to p_EXT_INP_PORT_VECTOR[51]
+set_location_assignment PIN_B13 -to p_EXT_INP_PORT_VECTOR[55]
+set_location_assignment PIN_A11 -to p_EXT_INP_PORT_VECTOR[59]
+set_location_assignment PIN_C9 -to p_EXT_INP_PORT_VECTOR[63]
+set_location_assignment PIN_E9 -to p_EXT_OUT_PORT_VECTOR[0]
+set_location_assignment PIN_F9 -to p_EXT_OUT_PORT_VECTOR[3]
+set_location_assignment PIN_E7 -to p_EXT_OUT_PORT_VECTOR[7]
+set_location_assignment PIN_A9 -to p_EXT_OUT_PORT_VECTOR[11]
+set_location_assignment PIN_E6 -to p_EXT_OUT_PORT_VECTOR[15]
+set_location_assignment PIN_F5 -to p_EXT_OUT_PORT_VECTOR[19]
+set_location_assignment PIN_K5 -to p_EXT_OUT_PORT_VECTOR[23]
+set_location_assignment PIN_D3 -to p_EXT_OUT_PORT_VECTOR[27]
+set_location_assignment PIN_A5 -to p_EXT_OUT_PORT_VECTOR[31]
+set_location_assignment PIN_C2 -to p_EXT_OUT_PORT_VECTOR[35]
+set_location_assignment PIN_A3 -to p_EXT_OUT_PORT_VECTOR[39]
+set_location_assignment PIN_P2 -to p_EXT_OUT_PORT_VECTOR[43]
+set_location_assignment PIN_L2 -to p_EXT_OUT_PORT_VECTOR[47]
+set_location_assignment PIN_J2 -to p_EXT_OUT_PORT_VECTOR[51]
+set_location_assignment PIN_N5 -to p_EXT_OUT_PORT_VECTOR[55]
+set_location_assignment PIN_L3 -to p_EXT_OUT_PORT_VECTOR[59]
+set_location_assignment PIN_E8 -to p_EXT_OUT_PORT_VECTOR[4]
+set_location_assignment PIN_D5 -to p_EXT_OUT_PORT_VECTOR[8]
+set_location_assignment PIN_B8 -to p_EXT_OUT_PORT_VECTOR[12]
+set_location_assignment PIN_F6 -to p_EXT_OUT_PORT_VECTOR[16]
+set_location_assignment PIN_J6 -to p_EXT_OUT_PORT_VECTOR[20]
+set_location_assignment PIN_C3 -to p_EXT_OUT_PORT_VECTOR[24]
+set_location_assignment PIN_B6 -to p_EXT_OUT_PORT_VECTOR[28]
+set_location_assignment PIN_G2 -to p_EXT_OUT_PORT_VECTOR[32]
+set_location_assignment PIN_D1 -to p_EXT_OUT_PORT_VECTOR[36]
+set_location_assignment PIN_B3 -to p_EXT_OUT_PORT_VECTOR[40]
+set_location_assignment PIN_N1 -to p_EXT_OUT_PORT_VECTOR[44]
+set_location_assignment PIN_K1 -to p_EXT_OUT_PORT_VECTOR[48]
+set_location_assignment PIN_G1 -to p_EXT_OUT_PORT_VECTOR[52]
+set_location_assignment PIN_N6 -to p_EXT_OUT_PORT_VECTOR[56]
+set_location_assignment PIN_L4 -to p_EXT_OUT_PORT_VECTOR[60]
+set_location_assignment PIN_E10 -to p_EXT_OUT_PORT_VECTOR[1]
+set_location_assignment PIN_F8 -to p_EXT_OUT_PORT_VECTOR[5]
+set_location_assignment PIN_C6 -to p_EXT_OUT_PORT_VECTOR[9]
+set_location_assignment PIN_A8 -to p_EXT_OUT_PORT_VECTOR[13]
+set_location_assignment PIN_E5 -to p_EXT_OUT_PORT_VECTOR[17]
+set_location_assignment PIN_G5 -to p_EXT_OUT_PORT_VECTOR[21]
+set_location_assignment PIN_D4 -to p_EXT_OUT_PORT_VECTOR[25]
+set_location_assignment PIN_A6 -to p_EXT_OUT_PORT_VECTOR[29]
+set_location_assignment PIN_F1 -to p_EXT_OUT_PORT_VECTOR[33]
+set_location_assignment PIN_A2 -to p_EXT_OUT_PORT_VECTOR[37]
+set_location_assignment PIN_A4 -to p_EXT_OUT_PORT_VECTOR[41]
+set_location_assignment PIN_N2 -to p_EXT_OUT_PORT_VECTOR[45]
+set_location_assignment PIN_K2 -to p_EXT_OUT_PORT_VECTOR[49]
+set_location_assignment PIN_P6 -to p_EXT_OUT_PORT_VECTOR[53]
+set_location_assignment PIN_N3 -to p_EXT_OUT_PORT_VECTOR[57]
+set_location_assignment PIN_R1 -to p_EXT_OUT_PORT_VECTOR[61]
+set_location_assignment PIN_G11 -to p_EXT_OUT_PORT_VECTOR[2]
+set_location_assignment PIN_D6 -to p_EXT_OUT_PORT_VECTOR[6]
+set_location_assignment PIN_B9 -to p_EXT_OUT_PORT_VECTOR[10]
+set_location_assignment PIN_A7 -to p_EXT_OUT_PORT_VECTOR[14]
+set_location_assignment PIN_F7 -to p_EXT_OUT_PORT_VECTOR[18]
+set_location_assignment PIN_K6 -to p_EXT_OUT_PORT_VECTOR[22]
+set_location_assignment PIN_F3 -to p_EXT_OUT_PORT_VECTOR[26]
+set_location_assignment PIN_B5 -to p_EXT_OUT_PORT_VECTOR[30]
+set_location_assignment PIN_F2 -to p_EXT_OUT_PORT_VECTOR[34]
+set_location_assignment PIN_B1 -to p_EXT_OUT_PORT_VECTOR[38]
+set_location_assignment PIN_B4 -to p_EXT_OUT_PORT_VECTOR[42]
+set_location_assignment PIN_L1 -to p_EXT_OUT_PORT_VECTOR[46]
+set_location_assignment PIN_J1 -to p_EXT_OUT_PORT_VECTOR[50]
+set_location_assignment PIN_P8 -to p_EXT_OUT_PORT_VECTOR[54]
+set_location_assignment PIN_P3 -to p_EXT_OUT_PORT_VECTOR[58]
+set_location_assignment PIN_T2 -to p_EXT_OUT_PORT_VECTOR[62]
+set_location_assignment PIN_P1 -to p_EXT_OUT_PORT_VECTOR[63]
+set_location_assignment PIN_L6 -to p_I_SEL_MODE
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

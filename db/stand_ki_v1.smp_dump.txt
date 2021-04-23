@@ -1,0 +1,19 @@
+
+State Machine - |stand_ki_v1|control_4:control_4_module|s_FSM
+Name s_FSM.st_imp_delay s_FSM.st_pack_delay s_FSM.st_out_data s_FSM.st_check_end_pack s_FSM.st_delay_after_laser s_FSM.st_wait_las s_FSM.st_continue s_FSM.st_set_new_mode s_FSM.st_idle 
+s_FSM.st_idle 0 0 0 0 0 0 0 0 0 
+s_FSM.st_set_new_mode 0 0 0 0 0 0 0 1 1 
+s_FSM.st_continue 0 0 0 0 0 0 1 0 1 
+s_FSM.st_wait_las 0 0 0 0 0 1 0 0 1 
+s_FSM.st_delay_after_laser 0 0 0 0 1 0 0 0 1 
+s_FSM.st_check_end_pack 0 0 0 1 0 0 0 0 1 
+s_FSM.st_out_data 0 0 1 0 0 0 0 0 1 
+s_FSM.st_pack_delay 0 1 0 0 0 0 0 0 1 
+s_FSM.st_imp_delay 1 0 0 0 0 0 0 0 1 
+
+State Machine - |stand_ki_v1|stand_test:self_test_module|s_FSM
+Name s_FSM.st_imp s_FSM.st_delay s_FSM.st_las s_FSM.st_gen 
+s_FSM.st_gen 0 0 0 0 
+s_FSM.st_las 0 0 1 1 
+s_FSM.st_delay 0 1 0 1 
+s_FSM.st_imp 1 0 0 1 

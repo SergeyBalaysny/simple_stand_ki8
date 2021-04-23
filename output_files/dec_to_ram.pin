@@ -1,0 +1,326 @@
+ -- Copyright (C) 2017  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+CHIP  "dec_to_ram"  ASSIGNED TO AN: EP4CE10F17C8
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
+p_EXT_OUT_PORT_VECTOR[37]    : A2        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[39]    : A3        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[41]    : A4        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[31]    : A5        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[29]    : A6        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[14]    : A7        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[13]    : A8        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[11]    : A9        : output : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[61]    : A10       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[59]    : A11       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[58]    : A12       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[56]    : A13       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[54]    : A14       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[48]    : A15       : bidir  : 2.5 V             :         : 7         : Y              
+VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
+p_EXT_OUT_PORT_VECTOR[38]    : B1        : output : 2.5 V             :         : 1         : Y              
+GND                          : B2        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[40]    : B3        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[42]    : B4        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[30]    : B5        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[28]    : B6        : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+p_EXT_OUT_PORT_VECTOR[12]    : B8        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[10]    : B9        : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
+p_EXT_INP_PORT_VECTOR[60]    : B11       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[57]    : B12       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[55]    : B13       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[50]    : B14       : bidir  : 2.5 V             :         : 7         : Y              
+GND                          : B15       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
+p_EXT_OUT_PORT_VECTOR[35]    : C2        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[24]    : C3        : output : 2.5 V             :         : 8         : Y              
+VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
+GND                          : C5        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[9]     : C6        : output : 2.5 V             :         : 8         : Y              
+VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
+p_EXT_INP_PORT_VECTOR[21]    : C8        : bidir  : 2.5 V             :         : 8         : Y              
+p_EXT_INP_PORT_VECTOR[63]    : C9        : bidir  : 2.5 V             :         : 7         : Y              
+VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
+GND                          : C12       : gnd    :                   :         :           :                
+VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
+p_EXT_INP_PORT_VECTOR[49]    : C14       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[47]    : C15       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_INP_PORT_VECTOR[44]    : C16       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_OUT_PORT_VECTOR[36]    : D1        : output : 2.5 V             :         : 1         : Y              
+~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
+p_EXT_OUT_PORT_VECTOR[27]    : D3        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[25]    : D4        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[8]     : D5        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[6]     : D6        : output : 2.5 V             :         : 8         : Y              
+GND                          : D7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+p_EXT_INP_PORT_VECTOR[62]    : D9        : bidir  : 2.5 V             :         : 7         : Y              
+GND                          : D10       : gnd    :                   :         :           :                
+p_EXT_INP_PORT_VECTOR[51]    : D11       : bidir  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
+VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
+p_EXT_INP_PORT_VECTOR[46]    : D14       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[45]    : D15       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_INP_PORT_VECTOR[42]    : D16       : bidir  : 2.5 V             :         : 6         : Y              
+GND+                         : E1        :        :                   :         : 1         :                
+GND                          : E2        : gnd    :                   :         :           :                
+VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
+GND                          : E4        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[17]    : E5        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[15]    : E6        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[7]     : E7        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[4]     : E8        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[0]     : E9        : output : 2.5 V             :         : 7         : Y              
+p_EXT_OUT_PORT_VECTOR[1]     : E10       : output : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[52]    : E11       : bidir  : 2.5 V             :         : 7         : Y              
+GNDA2                        : E12       : gnd    :                   :         :           :                
+GND                          : E13       : gnd    :                   :         :           :                
+VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
+GND+                         : E15       :        :                   :         : 6         :                
+p_CLK                        : E16       : input  : 2.5 V             :         : 6         : Y              
+p_EXT_OUT_PORT_VECTOR[33]    : F1        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[34]    : F2        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[26]    : F3        : output : 2.5 V             :         : 1         : Y              
+nSTATUS                      : F4        :        :                   :         : 1         :                
+p_EXT_OUT_PORT_VECTOR[19]    : F5        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[16]    : F6        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[18]    : F7        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[5]     : F8        : output : 2.5 V             :         : 8         : Y              
+p_EXT_OUT_PORT_VECTOR[3]     : F9        : output : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[53]    : F10       : bidir  : 2.5 V             :         : 7         : Y              
+p_EXT_INP_PORT_VECTOR[38]    : F11       : bidir  : 2.5 V             :         : 7         : Y              
+VCCA2                        : F12       : power  :                   : 2.5V    :           :                
+p_EXT_INP_PORT_VECTOR[40]    : F13       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_INP_PORT_VECTOR[43]    : F14       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_INP_PORT_VECTOR[20]    : F15       : bidir  : 2.5 V             :         : 6         : Y              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
+p_EXT_OUT_PORT_VECTOR[52]    : G1        : output : 2.5 V             :         : 1         : Y              
+p_EXT_OUT_PORT_VECTOR[32]    : G2        : output : 2.5 V             :         : 1         : Y              
+VCCIO1                       : G3        : power  :                   : 2.5V    : 1         :                
+GND                          : G4        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[21]    : G5        : output : 2.5 V             :         : 1         : Y              
+VCCINT                       : G6        : power  :                   : 1.2V    :           :                
+VCCINT                       : G7        : power  :                   : 1.2V    :           :                
+VCCINT                       : G8        : power  :                   : 1.2V    :           :                
+VCCINT                       : G9        : power  :                   : 1.2V    :           :                
+VCCINT                       : G10       : power  :                   : 1.2V    :           :                
+p_EXT_OUT_PORT_VECTOR[2]     : G11       : output : 2.5 V             :         : 6         : Y              
+MSEL2                        : G12       :        :                   :         : 6         :                
+GND                          : G13       : gnd    :                   :         :           :                
+VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
+p_EXT_INP_PORT_VECTOR[18]    : G15       : bidir  : 2.5 V             :         : 6         : Y              
+p_EXT_INP_PORT_VECTOR[1]     : G16       : bidir  : 2.5 V             :         : 6         : Y              
+~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
+TCK                          : H3        : input  :                   :         : 1         :                
+TDI                          : H4        : input  :                   :         : 1         :                
+nCONFIG                      : H5        :        :                   :         : 1         :                
+VCCINT                       : H6        : power  :                   : 1.2V    :           :                
+GND                          : H7        : gnd    :                   :         :           :                
+GND                          : H8        : gnd    :                   :         :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+GND                          : H10       : gnd    :                   :         :           :                
+VCCINT                       : H11       : power  :                   : 1.2V    :           :                
+MSEL1                        : H12       :        :                   :         : 6         :                
+MSEL0                        : H13       :        :                   :         : 6         :                
+CONF_DONE                    : H14       :        :                   :         : 6         :                
+GND                          : H15       : gnd    :                   :         :           :                
+GND                          : H16       : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[50]    : J1        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[51]    : J2        : output : 2.5 V             :         : 2         : Y              
+nCE                          : J3        :        :                   :         : 1         :                
+TDO                          : J4        : output :                   :         : 1         :                
+TMS                          : J5        : input  :                   :         : 1         :                
+p_EXT_OUT_PORT_VECTOR[20]    : J6        : output : 2.5 V             :         : 2         : Y              
+GND                          : J7        : gnd    :                   :         :           :                
+GND                          : J8        : gnd    :                   :         :           :                
+GND                          : J9        : gnd    :                   :         :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+p_EXT_INP_PORT_VECTOR[36]    : J11       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[34]    : J12       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[33]    : J13       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[41]    : J14       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[19]    : J15       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[16]    : J16       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_OUT_PORT_VECTOR[48]    : K1        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[49]    : K2        : output : 2.5 V             :         : 2         : Y              
+VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
+GND                          : K4        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[23]    : K5        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[22]    : K6        : output : 2.5 V             :         : 2         : Y              
+VCCINT                       : K7        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 4         :                
+p_EXT_INP_PORT_VECTOR[39]    : K10       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[37]    : K11       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[35]    : K12       : bidir  : 2.5 V             :         : 5         : Y              
+GND                          : K13       : gnd    :                   :         :           :                
+VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
+p_EXT_INP_PORT_VECTOR[17]    : K15       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[14]    : K16       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_OUT_PORT_VECTOR[46]    : L1        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[47]    : L2        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[59]    : L3        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[60]    : L4        : output : 2.5 V             :         : 2         : Y              
+VCCA1                        : L5        : power  :                   : 2.5V    :           :                
+p_I_SEL_MODE                 : L6        : input  : 2.5 V             :         : 2         : Y              
+p_EXT_CNTRL_BUTTON_CONT      : L7        : input  : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L9        :        :                   :         : 4         :                
+p_EXT_INP_PORT_VECTOR[23]    : L10       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[32]    : L11       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[31]    : L12       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[29]    : L13       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[30]    : L14       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[15]    : L15       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[12]    : L16       : bidir  : 2.5 V             :         : 5         : Y              
+GND+                         : M1        :        :                   :         : 2         :                
+GND+                         : M2        :        :                   :         : 2         :                
+VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
+GND                          : M4        : gnd    :                   :         :           :                
+GNDA1                        : M5        : gnd    :                   :         :           :                
+p_EXT_CNTRL_BUTTON_RUN       : M6        : input  : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 4         :                
+p_EXT_INP_PORT_VECTOR[22]    : M10       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[25]    : M11       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[28]    : M12       : bidir  : 2.5 V             :         : 5         : Y              
+GND                          : M13       : gnd    :                   :         :           :                
+VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
+GND+                         : M15       :        :                   :         : 5         :                
+GND+                         : M16       :        :                   :         : 5         :                
+p_EXT_OUT_PORT_VECTOR[44]    : N1        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[45]    : N2        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[57]    : N3        : output : 2.5 V             :         : 3         : Y              
+VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
+p_EXT_OUT_PORT_VECTOR[55]    : N5        : output : 2.5 V             :         : 3         : Y              
+p_EXT_OUT_PORT_VECTOR[56]    : N6        : output : 2.5 V             :         : 3         : Y              
+GND                          : N7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 4         :                
+GND                          : N10       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N11       :        :                   :         : 4         :                
+p_EXT_IMP_LASER              : N12       : output : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[24]    : N13       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[26]    : N14       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[13]    : N15       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[10]    : N16       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_OUT_PORT_VECTOR[63]    : P1        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[43]    : P2        : output : 2.5 V             :         : 2         : Y              
+p_EXT_OUT_PORT_VECTOR[58]    : P3        : output : 2.5 V             :         : 3         : Y              
+VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
+GND                          : P5        : gnd    :                   :         :           :                
+p_EXT_OUT_PORT_VECTOR[53]    : P6        : output : 2.5 V             :         : 3         : Y              
+VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
+p_EXT_OUT_PORT_VECTOR[54]    : P8        : output : 2.5 V             :         : 3         : Y              
+p_EXT_CNTRL_BUTTON_OFF       : P9        : input  : 2.5 V             :         : 4         : Y              
+VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
+p_EXT_GEN_BUTTON_UP          : P11       : input  : 2.5 V             :         : 4         : Y              
+GND                          : P12       : gnd    :                   :         :           :                
+VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
+p_EXT_INP_PORT_VECTOR[27]    : P14       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[11]    : P15       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_INP_PORT_VECTOR[8]     : P16       : bidir  : 2.5 V             :         : 5         : Y              
+p_EXT_OUT_PORT_VECTOR[61]    : R1        : output : 2.5 V             :         : 2         : Y              
+GND                          : R2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R8        :        :                   :         : 3         :                
+p_EXT_GEN_BUTTON_DWN         : R9        : input  : 2.5 V             :         : 4         : Y              
+p_EXT_CNTRL_BUTTON_FOUR      : R10       : input  : 2.5 V             :         : 4         : Y              
+p_EXT_IMP_GEN                : R11       : output : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[0]     : R12       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[2]     : R13       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[4]     : R14       : bidir  : 2.5 V             :         : 4         : Y              
+GND                          : R15       : gnd    :                   :         :           :                
+p_EXT_INP_PORT_VECTOR[6]     : R16       : bidir  : 2.5 V             :         : 5         : Y              
+VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
+p_EXT_OUT_PORT_VECTOR[62]    : T2        : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 4         :                
+p_EXT_INP_PORT_VECTOR[3]     : T12       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[5]     : T13       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[7]     : T14       : bidir  : 2.5 V             :         : 4         : Y              
+p_EXT_INP_PORT_VECTOR[9]     : T15       : bidir  : 2.5 V             :         : 4         : Y              
+VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                

@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'p_CLK'
+Slack : -10.916
+TNS   : -11637.672
+
+Type  : Slow 1200mV 85C Model Setup 'p_EXT_GEN_BUTTON_UP'
+Slack : -2.303
+TNS   : -7.946
+
+Type  : Slow 1200mV 85C Model Setup 'p_EXT_GEN_BUTTON_DWN'
+Slack : -1.627
+TNS   : -7.153
+
+Type  : Slow 1200mV 85C Model Hold 'p_CLK'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'p_EXT_GEN_BUTTON_UP'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'p_EXT_GEN_BUTTON_DWN'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'p_CLK'
+Slack : -3.201
+TNS   : -4038.014
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_DWN'
+Slack : -3.000
+TNS   : -11.922
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_UP'
+Slack : -3.000
+TNS   : -11.922
+
+Type  : Slow 1200mV 0C Model Setup 'p_CLK'
+Slack : -10.059
+TNS   : -10917.729
+
+Type  : Slow 1200mV 0C Model Setup 'p_EXT_GEN_BUTTON_UP'
+Slack : -2.057
+TNS   : -6.897
+
+Type  : Slow 1200mV 0C Model Setup 'p_EXT_GEN_BUTTON_DWN'
+Slack : -1.424
+TNS   : -6.091
+
+Type  : Slow 1200mV 0C Model Hold 'p_CLK'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'p_EXT_GEN_BUTTON_UP'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'p_EXT_GEN_BUTTON_DWN'
+Slack : 0.662
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'p_CLK'
+Slack : -3.201
+TNS   : -4038.014
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_UP'
+Slack : -3.000
+TNS   : -11.955
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_DWN'
+Slack : -3.000
+TNS   : -11.922
+
+Type  : Fast 1200mV 0C Model Setup 'p_CLK'
+Slack : -4.113
+TNS   : -4032.582
+
+Type  : Fast 1200mV 0C Model Setup 'p_EXT_GEN_BUTTON_UP'
+Slack : -0.422
+TNS   : -1.008
+
+Type  : Fast 1200mV 0C Model Setup 'p_EXT_GEN_BUTTON_DWN'
+Slack : -0.101
+TNS   : -0.194
+
+Type  : Fast 1200mV 0C Model Hold 'p_CLK'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'p_EXT_GEN_BUTTON_UP'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'p_EXT_GEN_BUTTON_DWN'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'p_CLK'
+Slack : -3.000
+TNS   : -2883.602
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_UP'
+Slack : -3.000
+TNS   : -9.720
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'p_EXT_GEN_BUTTON_DWN'
+Slack : -3.000
+TNS   : -9.666
+
+------------------------------------------------------------

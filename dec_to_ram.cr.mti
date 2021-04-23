@@ -1,0 +1,244 @@
+C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module4.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module4.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity channel_imp_module4
+-- Compiling architecture channel_imp_module4_behav of channel_imp_module4
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity gen_tb
+-- Compiling architecture gen_tb_synt of gen_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity counter
+-- Compiling architecture counter_behav of counter
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/mem_filter_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/mem_filter_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity mem_filter_tb
+-- Compiling architecture mem_filter_tb_behav of mem_filter_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/control.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/control.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity control
+-- Compiling architecture control_behav of control
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/dec_to_ram_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/dec_to_ram_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling architecture dec_to_ram_tb_behav of dec_to_ram_tb
+-- Loading entity dec_to_ram_tb
+-- Loading entity dec_to_ram
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_4tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_4tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity control_4tb
+-- Compiling architecture control_4tb_arc of control_4tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gen
+-- Compiling architecture gen_synt of gen
+** Warning: C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen.vhd(34): (vcom-1236) Shared variables must be of a protected type.
+** Warning: C:/Users/Budkova/Documents/Quartus/dec_to_ram/gen.vhd(35): (vcom-1236) Shared variables must be of a protected type.
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module2_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module2_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity channel_imp_module2_tb
+-- Compiling architecture channel_imp_module2_tb_behav of channel_imp_module2_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/mem_filter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/mem_filter.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity mem_filter
+-- Compiling architecture mem_filter_behav of mem_filter
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module4_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module4_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity channel_imp_module4_tb
+-- Compiling architecture channel_imp_module4_tb_behav of channel_imp_module4_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_1_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_1_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_1_tb
+-- Compiling architecture counter_1_tb_behav of counter_1_tb
+-- Loading entity counter_1
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/fake_mem.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/fake_mem.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity fake_mem
+-- Compiling architecture fake_mem_behav of fake_mem
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity control_tb
+-- Compiling architecture control_tb_behav of control_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_1.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_1
+-- Compiling architecture counter_behav of counter_1
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/out_port_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/out_port_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity out_port_tb
+-- Compiling architecture out_port_tb_behav of out_port_tb
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/imp_module_control.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/imp_module_control.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity imp_module_control
+-- Compiling architecture imp_module_control_behav of imp_module_control
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/out_port.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/out_port.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity out_port
+-- Compiling architecture out_port_behav of out_port
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_4.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/control_4.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity control_4
+-- Compiling architecture control_4_behav of control_4
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module2.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/channel_imp_module2.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity channel_imp_module2
+-- Compiling architecture channel_imp_module2_behav of channel_imp_module2
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/counter_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_tb
+-- Compiling architecture counter_tb_behav of counter_tb
+-- Loading entity counter
+
+} {} {}} C:/Users/Budkova/Documents/Quartus/dec_to_ram/dec_to_ram.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/Budkova/Documents/Quartus/dec_to_ram/dec_to_ram.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity dec_to_ram
+-- Compiling architecture dec_to_ram_tb_behav of dec_to_ram
+
+} {} {}}
